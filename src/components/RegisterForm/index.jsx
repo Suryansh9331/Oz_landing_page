@@ -819,9 +819,7 @@ export default function StudentRegistrationForm() {
         </div>
         
         {/* Limited Time Offer Badge */}
-        <div className="absolute top-4 right-4 bg-[#e05527] text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg transform rotate-3 animate-pulse">
-          Limited Time Offer!
-        </div>
+       
       </div>
     </div>
   );
