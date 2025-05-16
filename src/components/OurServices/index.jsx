@@ -336,9 +336,9 @@ export default function TrainingServices({setIsOpen}) {
     <div className="w-full max-w-6xl mx-auto p-4 py-16 bg-gradient-to-br from-slate-50 to-white">
       {/* Animated heading section */}
       <div className="relative mb-16">
-        <div className="absolute inset-0 flex items-center justify-center opacity-5">
-          <div className="text-8xl font-bold text-black">TRAINING</div>
-        </div>
+        {/* <div className="absolute w-full inset-0 flex items-center justify-center opacity-5">
+          <div className="text-2xl md:text-4xl font-bold text-black">TRAINING</div>
+        </div> */}
         <h2 
           className="text-4xl font-bold text-center relative z-10 opacity-0 transform translate-y-6 transition-all duration-700 ease-out" 
           style={{ 

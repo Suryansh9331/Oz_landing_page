@@ -344,9 +344,9 @@ const HeroSection = ({ setIsOpen }) => {
   return (
     <div
       ref={sectionRef}
-      className="w-full px-4 sm:px-8 lg:px-16 py-10 lg:py-10 bg-white"
+      className="w-full px-4 sm:px-8 lg:px-16 py-10 lg:py-10 bg-white overflow-x-hidden"
     >
-      <div className="w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center overflow-x-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute bottom-68 left-32 sm:left-150 text-3xl sm:text-4xl animate-float opacity-50">
             📱

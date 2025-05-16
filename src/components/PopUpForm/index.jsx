@@ -300,7 +300,7 @@ export default function PopupForm({ isOpen: externalIsOpen, setIsOpen: externalS
       const initialTimer = setTimeout(() => {
         setIsInternalOpen(true);
         document.body.style.overflow = "hidden";
-      }, 1000);
+      }, 6000);
 
       return () => {
         clearTimeout(initialTimer);

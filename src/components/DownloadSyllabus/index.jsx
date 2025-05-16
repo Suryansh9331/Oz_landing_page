@@ -106,7 +106,7 @@ const DownloadSyllabusSection = ({ setIsOpen }) => {
           <div className="relative   w-20 h-20 opacity-10 animate-pulse">
             <FileText className="w-full h-full" style={{ color: '#e05527' }} />
           </div>
-          <div className="absolute bottom-6 right-10 w-16 h-16 opacity-20 animate-bounce">
+          <div className="absolute bottom-0 right-10 w-16 h-16 opacity-20 animate-bounce">
             <Download className="w-full h-full" style={{ color: '#e05527' }} />
           </div>
           <div className="absolute top-1/3 right-10 w-2 h-2 rounded-full animate-ping" style={{ backgroundColor: '#e05527' }}></div>
