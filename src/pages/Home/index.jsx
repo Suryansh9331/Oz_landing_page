@@ -25,7 +25,7 @@ const Home = () => {
 
       {/* Popup Form - controlled by sticky button */}
       <PopupForm isOpen={isPopupOpen} setIsOpen={setIsPopupOpen} />
-      {/* <PopupForm /> */}
+      <PopupForm />
       <BenefitSection />
       <CoursesOverview />
       <DownloadSyllabusSection setIsOpen={setIsPopupOpen} />

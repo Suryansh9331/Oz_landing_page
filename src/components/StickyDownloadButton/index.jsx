@@ -71,7 +71,7 @@ function StickyButton({ setIsOpen }) {
           transition-all duration-300 shadow-lg hover:shadow-xl 
           transform hover:translate-x-[-5px] focus:outline-none 
           flex items-center justify-center
-          
+          cursor-pointer
           /* Responsive width */
           w-10 sm:w-12 md:w-14 lg:w-16 xl:w-18
         `}

@@ -645,7 +645,7 @@ export default function PopupForm({
         reopenTimer = setTimeout(() => {
           setIsInternalOpen(true);
           document.body.style.overflow = "hidden";
-        }, 10000);
+        }, 30000);
       }
       return () => {
         clearTimeout(reopenTimer);
@@ -744,6 +744,7 @@ export default function PopupForm({
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            cursor={"pointer"}
           >
             <path
               strokeLinecap="round"
@@ -884,7 +885,7 @@ export default function PopupForm({
                 !formData.course ||
                 !formData.captcha
                   ? "bg-orange-300 cursor-not-allowed"
-                  : "bg-orange-500 hover:bg-orange-600 text-white hover:shadow-lg"
+                  : "bg-orange-500 hover:bg-orange-600 text-white hover:shadow-lg cursor-pointer"
               }`}
             >
               Book now

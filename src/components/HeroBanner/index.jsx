@@ -315,9 +315,7 @@
 // export default BannerSection;
 
 import React, { useEffect, useRef, useState } from "react";
-import boy from "../../assets/images/boy.jpg";
 import boy2 from "../../assets/images/boy2.jpg";
-import girl from "../../assets/images/girl.jpg";
 const HeroSection = ({ setIsOpen }) => {
   const [inView, setInView] = useState(false);
   const sectionRef = useRef(null);
@@ -441,13 +439,13 @@ const HeroSection = ({ setIsOpen }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => setIsOpen(true)}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg cursor-pointer"
             >
               🎯 GET PERSONALIZED ADVICE
             </button>
             <button
               onClick={() => setIsOpen(true)}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
+              className=" cursor-pointer flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
             >
               📅 BOOK OUR FREE DEMO CLASS
             </button>
