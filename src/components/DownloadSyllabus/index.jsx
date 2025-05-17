@@ -6,7 +6,7 @@ const DownloadSyllabusSection = ({ setIsOpen }) => {
   const [isDownloading, setIsDownloading] = useState(false);
 
   return (
-    <div className="w-full py-16 px-4 overflow-hidden" style={{ backgroundColor: '#fff3e3' }}>
+    <div className="w-full py-16 px-2 overflow-hidden" style={{ backgroundColor: '#fff3e3' }}>
       <div className="max-w-4xl mx-auto text-center">
         {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight" style={{ color: '#11182b' }}>

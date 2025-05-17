@@ -339,12 +339,43 @@ export default function PopupForm({ isOpen: externalIsOpen, setIsOpen: externalS
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    handleClose();
-    // You can send form data to backend here
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // Basic captcha validation
+  if (formData.captcha !== "135") {
+    alert("answer is wrong ,please fill up the right answer");
+    return;
+  }
+
+  try {
+    const response = await fetch("https://sheetdb.io/api/v1/ouzt6gbqw3ow1", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ data: formData })
+    });
+
+    if (response.ok) {
+      alert("Form submitted successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        course: "",
+        captcha: "",
+      });
+      handleClose();
+    } else {
+      alert("Failed to submit form. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("An error occurred. Please try again.");
+  }
+};
+
 
   if (!isOpen) return null;
 
@@ -468,12 +499,19 @@ export default function PopupForm({ isOpen: externalIsOpen, setIsOpen: externalS
                 className="w-20 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
-            <button
-              type="submit"
-              className="w-full py-3 px-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all"
-            >
-              Book now
-            </button>
+           <button
+  type="submit"
+  disabled={
+    !formData.name || !formData.email || !formData.phone || !formData.course || !formData.captcha
+  }
+  className={`w-full py-3 px-4 font-bold rounded-lg shadow-md transition-all ${
+    !formData.name || !formData.email || !formData.phone || !formData.course || !formData.captcha
+      ? "bg-orange-300 cursor-not-allowed"
+      : "bg-orange-500 hover:bg-orange-600 text-white hover:shadow-lg"
+  }`}
+>
+  Book now
+</button>
           </form>
         </div>
       </div>

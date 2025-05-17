@@ -12,11 +12,11 @@
 //     submitted: false,
 //     error: null
 //   });
-  
+
 //   const [mathProblem, setMathProblem] = useState({ num1: 0, num2: 0, answer: 0 });
 //   const [formStep, setFormStep] = useState(0);
 //   const [isAnimating, setIsAnimating] = useState(false);
-  
+
 //   const courses = [
 //     "Web Development Fundamentals",
 //     "Advanced React & State Management",
@@ -24,7 +24,7 @@
 //     "UI/UX Design Principles",
 //     "Mobile App Development"
 //   ];
-  
+
 //   // Generate random math problem
 //   useEffect(() => {
 //     const num1 = Math.floor(Math.random() * 10) + 5;
@@ -35,14 +35,14 @@
 //       answer: num1 * num2
 //     });
 //   }, []);
-  
+
 //   const handleChange = (e) => {
 //     setFormState({
 //       ...formState,
 //       [e.target.name]: e.target.value
 //     });
 //   };
-  
+
 //   const validateStep = () => {
 //     if (formStep === 0) {
 //       return formState.name && formState.email;
@@ -55,7 +55,7 @@
 //     }
 //     return false;
 //   };
-  
+
 //   const nextStep = () => {
 //     if (validateStep()) {
 //       setIsAnimating(true);
@@ -70,7 +70,7 @@
 //       });
 //     }
 //   };
-  
+
 //   const prevStep = () => {
 //     setIsAnimating(true);
 //     setTimeout(() => {
@@ -78,7 +78,7 @@
 //       setIsAnimating(false);
 //     }, 300);
 //   };
-  
+
 //   const handleSubmit = (e) => {
 //     e.preventDefault();
 //     if (parseInt(formState.mathAnswer) === mathProblem.answer) {
@@ -94,7 +94,7 @@
 //       });
 //     }
 //   };
-  
+
 //   if (formState.submitted) {
 //     return (
 //       <div className="w-full max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-500 ease-in-out">
@@ -110,7 +110,7 @@
 //             <p className="text-gray-600"><span className="font-medium">Course:</span> {formState.course}</p>
 //             <p className="text-gray-600"><span className="font-medium">Email:</span> {formState.email}</p>
 //           </div>
-//           <button 
+//           <button
 //             className="w-full py-3 bg-[#e05527] text-white font-bold rounded-lg shadow hover:bg-[#d04517] transition-all duration-300"
 //             onClick={() => setFormState({...formState, submitted: false})}
 //           >
@@ -120,7 +120,7 @@
 //       </div>
 //     );
 //   }
-  
+
 //   const getStepContent = () => {
 //     switch (formStep) {
 //       case 0:
@@ -146,7 +146,7 @@
 //                   />
 //                 </div>
 //               </div>
-              
+
 //               <div className="relative">
 //                 <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="email">Email Address <span className="text-red-500">*</span></label>
 //                 <div className="relative">
@@ -191,7 +191,7 @@
 //                   />
 //                 </div>
 //               </div>
-              
+
 //               <div className="relative">
 //                 <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="address">Address <span className="text-red-500">*</span></label>
 //                 <div className="relative">
@@ -236,14 +236,14 @@
 //                   ))}
 //                 </select>
 //               </div>
-              
+
 //               <div className="mt-6 p-4 bg-[#fff9eb] rounded-lg border border-yellow-200">
 //                 <h3 className="font-bold text-gray-800 mb-2 flex items-center">
 //                   Course Details
 //                 </h3>
 //                 <p className="text-gray-600 text-sm">
-//                   {formState.course ? 
-//                     `You've selected: ${formState.course}. Our expert instructors will guide you through every step of the learning process.` : 
+//                   {formState.course ?
+//                     `You've selected: ${formState.course}. Our expert instructors will guide you through every step of the learning process.` :
 //                     "Please select a course to see more details."
 //                   }
 //                 </p>
@@ -258,19 +258,19 @@
 //         return (
 //           <div className={`transition-all duration-300 ${isAnimating ? 'opacity-0 transform translate-x-10' : 'opacity-100'}`}>
 //             <h2 className="text-xl font-bold text-gray-800 mb-6">Verification</h2>
-            
+
 //             <div className="p-4 bg-[#fff9eb] rounded-lg border border-yellow-200 mb-4">
 //               <h3 className="font-bold text-gray-800 mb-2 flex items-center">
 //                 <Brain className="h-5 w-5 mr-2 text-[#e05527]" />
 //                 Quick Math Challenge
 //               </h3>
 //               <p className="text-gray-600 text-sm mb-2">Please solve this simple math problem to complete your registration:</p>
-              
+
 //               <div className="flex items-center justify-center p-3 bg-white rounded-lg shadow-sm">
 //                 <span className="text-xl font-bold text-gray-800">{mathProblem.num1} × {mathProblem.num2} = ?</span>
 //               </div>
 //             </div>
-            
+
 //             <div className="relative">
 //               <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="mathAnswer">Your Answer <span className="text-red-500">*</span></label>
 //               <input
@@ -284,13 +284,13 @@
 //                 required
 //               />
 //             </div>
-            
+
 //             {formState.error && (
 //               <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded-md">
 //                 <p className="text-sm text-red-600">{formState.error}</p>
 //               </div>
 //             )}
-            
+
 //             <div className="mt-6 p-4 bg-gray-50 rounded-lg">
 //               <h3 className="font-medium text-gray-800 mb-2">Registration Summary:</h3>
 //               <p className="text-gray-600 text-sm"><span className="font-medium">Name:</span> {formState.name}</p>
@@ -304,7 +304,7 @@
 //         return null;
 //     }
 //   };
-  
+
 //   return (
 //     <div className="h-auto flex items-start justify-center bg-gradient-to-br from-[#fff9eb] to-white py-12 sm:px-6 lg:px-8">
 //       <div className="w-full max-w-md">
@@ -319,7 +319,7 @@
 //             </div>
 //             <p className="text-white/80 text-sm">Join our courses and start your learning journey today!</p>
 //           </div>
-          
+
 //           {/* Progress Bar */}
 //           <div className="px-6 pt-4">
 //             <div className="flex justify-between mb-2">
@@ -339,17 +339,17 @@
 //               ))}
 //             </div>
 //             <div className="w-full bg-gray-200 rounded-full h-1.5 mb-6">
-//               <div 
+//               <div
 //                 className="bg-[#e05527] h-1.5 rounded-full transition-all duration-500"
 //                 style={{ width: `${(formStep / 3) * 100}%` }}
 //               ></div>
 //             </div>
 //           </div>
-          
+
 //           {/* Form Content */}
 //           <form onSubmit={handleSubmit} className="px-6 py-4">
 //             {getStepContent()}
-            
+
 //             {/* Form Navigation */}
 //             <div className="mt-8 flex justify-between">
 //               {formStep > 0 && (
@@ -361,15 +361,15 @@
 //                   Back
 //                 </button>
 //               )}
-              
+
 //               {formStep < 3 ? (
 //                 <button
 //                   type="button"
 //                   onClick={nextStep}
 //                   disabled={!validateStep()}
 //                   className={`ml-auto px-4 py-2 rounded-md flex items-center ${
-//                     validateStep() 
-//                       ? 'bg-[#e05527] text-white hover:bg-[#d04517]' 
+//                     validateStep()
+//                       ? 'bg-[#e05527] text-white hover:bg-[#d04517]'
 //                       : 'bg-gray-300 text-gray-500 cursor-not-allowed'
 //                   } transition-colors duration-300`}
 //                 >
@@ -385,7 +385,7 @@
 //               )}
 //             </div>
 //           </form>
-          
+
 //           {/* Form Footer */}
 //           <div className="px-6 py-4 bg-gray-50">
 //             <div className="flex items-center justify-center text-sm text-gray-500">
@@ -394,7 +394,7 @@
 //             </div>
 //           </div>
 //         </div>
-        
+
 //         {/* Limited Time Offer Badge */}
 //         <div className="absolute top-4 right-4 bg-[#e05527] text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg transform rotate-3 animate-pulse">
 //           Limited Time Offer!
@@ -404,40 +404,47 @@
 //   );
 // }
 
-
-
-
 import boy from "../../assets/images/boy.jpg";
-
-
-
-import { useState, useEffect } from 'react';
-import { ChevronRight, CheckCircle, X, BookOpen, PhoneCall, MapPin, Mail, User, Brain } from 'lucide-react';
-
+import { useState, useEffect } from "react";
+import {
+  ChevronRight,
+  CheckCircle,
+  X,
+  BookOpen,
+  PhoneCall,
+  MapPin,
+  Mail,
+  User,
+  Brain,
+} from "lucide-react";
 export default function StudentRegistrationForm() {
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    address: '',
-    course: '',
-    mathAnswer: '',
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+    course: "",
+    mathAnswer: "",
     submitted: false,
-    error: null
+    error: null,
   });
-  
-  const [mathProblem, setMathProblem] = useState({ num1: 0, num2: 0, answer: 0 });
+
+  const [mathProblem, setMathProblem] = useState({
+    num1: 0,
+    num2: 0,
+    answer: 0,
+  });
   const [formStep, setFormStep] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  
+
   const courses = [
     "Web Development Fundamentals",
     "Advanced React & State Management",
     "Full-Stack JavaScript Masterclass",
     "UI/UX Design Principles",
-    "Mobile App Development"
+    "Mobile App Development",
   ];
-  
+
   // Generate random math problem
   useEffect(() => {
     const num1 = Math.floor(Math.random() * 10) + 5;
@@ -445,17 +452,17 @@ export default function StudentRegistrationForm() {
     setMathProblem({
       num1,
       num2,
-      answer: num1 * num2
+      answer: num1 * num2,
     });
   }, []);
-  
+
   const handleChange = (e) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
-  
+
   const validateStep = () => {
     if (formStep === 0) {
       return formState.name && formState.email;
@@ -468,7 +475,7 @@ export default function StudentRegistrationForm() {
     }
     return false;
   };
-  
+
   const nextStep = () => {
     if (validateStep()) {
       setIsAnimating(true);
@@ -476,14 +483,17 @@ export default function StudentRegistrationForm() {
         setFormStep(formStep + 1);
         setIsAnimating(false);
       }, 300);
-    } else if (formStep === 3 && parseInt(formState.mathAnswer) !== mathProblem.answer) {
+    } else if (
+      formStep === 3 &&
+      parseInt(formState.mathAnswer) !== mathProblem.answer
+    ) {
       setFormState({
         ...formState,
-        error: "Incorrect answer to math problem. Please try again."
+        error: "Incorrect answer to math problem. Please try again.",
       });
     }
   };
-  
+
   const prevStep = () => {
     setIsAnimating(true);
     setTimeout(() => {
@@ -491,23 +501,46 @@ export default function StudentRegistrationForm() {
       setIsAnimating(false);
     }, 300);
   };
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (parseInt(formState.mathAnswer) === mathProblem.answer) {
+
+    if (parseInt(formState.mathAnswer) !== mathProblem.answer) {
       setFormState({
         ...formState,
-        submitted: true,
-        error: null
+        error: "Incorrect answer to math problem.",
       });
-    } else {
-      setFormState({
-        ...formState,
-        error: "Incorrect answer to math problem. Please try again."
+      return;
+    }
+
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/ouzt6gbqw3ow1", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data: {
+            name: formState.name,
+            email: formState.email,
+            phone: formState.phone,
+            address: formState.address,
+            course: formState.course,
+          },
+        }),
       });
+
+      if (response.ok) {
+        setFormState({ ...formState, submitted: true, error: null });
+      } else {
+        setFormState({ ...formState, error: "Failed to submit data." });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setFormState({ ...formState, error: "Something went wrong." });
     }
   };
-  
+
   if (formState.submitted) {
     return (
       <div className="w-full max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-500 ease-in-out">
@@ -515,17 +548,30 @@ export default function StudentRegistrationForm() {
           <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
             <CheckCircle className="h-8 w-8 text-green-600" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Registration Successful!</h2>
-          <p className="text-gray-600 mb-6">Thank you for registering for our course. We'll contact you shortly with further details.</p>
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            Registration Successful!
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Thank you for registering for our course. We'll contact you shortly
+            with further details.
+          </p>
           <div className="bg-gray-50 p-4 rounded-lg mb-6">
-            <h3 className="font-medium text-gray-800 mb-2">Registration Details:</h3>
-            <p className="text-gray-600"><span className="font-medium">Name:</span> {formState.name}</p>
-            <p className="text-gray-600"><span className="font-medium">Course:</span> {formState.course}</p>
-            <p className="text-gray-600"><span className="font-medium">Email:</span> {formState.email}</p>
+            <h3 className="font-medium text-gray-800 mb-2">
+              Registration Details:
+            </h3>
+            <p className="text-gray-600">
+              <span className="font-medium">Name:</span> {formState.name}
+            </p>
+            <p className="text-gray-600">
+              <span className="font-medium">Course:</span> {formState.course}
+            </p>
+            <p className="text-gray-600">
+              <span className="font-medium">Email:</span> {formState.email}
+            </p>
           </div>
-          <button 
+          <button
             className="w-full py-3 bg-[#e05527] text-white font-bold rounded-lg shadow hover:bg-[#d04517] transition-all duration-300"
-            onClick={() => setFormState({...formState, submitted: false})}
+            onClick={() => setFormState({ ...formState, submitted: false })}
           >
             Register Another Student
           </button>
@@ -533,16 +579,27 @@ export default function StudentRegistrationForm() {
       </div>
     );
   }
-  
+
   const getStepContent = () => {
     switch (formStep) {
       case 0:
         return (
-          <div className={`transition-all duration-300 ${isAnimating ? 'opacity-0 transform translate-x-10' : 'opacity-100'}`}>
-            <h2 className="text-xl font-bold text-gray-800 mb-6">Personal Information</h2>
+          <div
+            className={`transition-all duration-300 ${
+              isAnimating ? "opacity-0 transform translate-x-10" : "opacity-100"
+            }`}
+          >
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
+              Personal Information
+            </h2>
             <div className="space-y-4">
               <div className="relative">
-                <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="name">Full Name <span className="text-red-500">*</span></label>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-1"
+                  htmlFor="name"
+                >
+                  Full Name <span className="text-red-500">*</span>
+                </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <User className="h-5 w-5 text-gray-400" />
@@ -559,9 +616,14 @@ export default function StudentRegistrationForm() {
                   />
                 </div>
               </div>
-              
+
               <div className="relative">
-                <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="email">Email Address <span className="text-red-500">*</span></label>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-1"
+                  htmlFor="email"
+                >
+                  Email Address <span className="text-red-500">*</span>
+                </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
@@ -583,11 +645,22 @@ export default function StudentRegistrationForm() {
         );
       case 1:
         return (
-          <div className={`transition-all duration-300 ${isAnimating ? 'opacity-0 transform translate-x-10' : 'opacity-100'}`}>
-            <h2 className="text-xl font-bold text-gray-800 mb-6">Contact Details</h2>
+          <div
+            className={`transition-all duration-300 ${
+              isAnimating ? "opacity-0 transform translate-x-10" : "opacity-100"
+            }`}
+          >
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
+              Contact Details
+            </h2>
             <div className="space-y-4">
               <div className="relative">
-                <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="phone">Phone Number <span className="text-red-500">*</span></label>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-1"
+                  htmlFor="phone"
+                >
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <PhoneCall className="h-5 w-5 text-gray-400" />
@@ -604,9 +677,14 @@ export default function StudentRegistrationForm() {
                   />
                 </div>
               </div>
-              
+
               <div className="relative">
-                <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="address">Address <span className="text-red-500">*</span></label>
+                <label
+                  className="block text-gray-700 text-sm font-medium mb-1"
+                  htmlFor="address"
+                >
+                  Address <span className="text-red-500">*</span>
+                </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <MapPin className="h-5 w-5 text-gray-400" />
@@ -628,10 +706,18 @@ export default function StudentRegistrationForm() {
         );
       case 2:
         return (
-          <div className={`transition-all duration-300 ${isAnimating ? 'opacity-0 transform translate-x-10' : 'opacity-100'}`}>
-            <h2 className="text-xl font-bold text-gray-800 mb-6">Course Selection</h2>
+          <div
+            className={`transition-all duration-300 ${
+              isAnimating ? "opacity-0 transform translate-x-10" : "opacity-100"
+            }`}
+          >
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
+              Course Selection
+            </h2>
             <div className="space-y-2">
-              <label className="block text-gray-700 text-sm font-medium mb-1">Select Course <span className="text-red-500">*</span></label>
+              <label className="block text-gray-700 text-sm font-medium mb-1">
+                Select Course <span className="text-red-500">*</span>
+              </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <BookOpen className="h-5 w-5 text-gray-400" />
@@ -645,23 +731,26 @@ export default function StudentRegistrationForm() {
                 >
                   <option value="">Select a course</option>
                   {courses.map((course, index) => (
-                    <option key={index} value={course}>{course}</option>
+                    <option key={index} value={course}>
+                      {course}
+                    </option>
                   ))}
                 </select>
               </div>
-              
+
               <div className="mt-6 p-4 bg-[#fff9eb] rounded-lg border border-yellow-200">
                 <h3 className="font-bold text-gray-800 mb-2 flex items-center">
                   Course Details
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  {formState.course ? 
-                    `You've selected: ${formState.course}. Our expert instructors will guide you through every step of the learning process.` : 
-                    "Please select a course to see more details."
-                  }
+                  {formState.course
+                    ? `You've selected: ${formState.course}. Our expert instructors will guide you through every step of the learning process.`
+                    : "Please select a course to see more details."}
                 </p>
                 {formState.course && (
-                  <p className="text-sm text-[#e05527] font-medium mt-2">15% discount available for a limited time!</p>
+                  <p className="text-sm text-[#e05527] font-medium mt-2">
+                    15% discount available for a limited time!
+                  </p>
                 )}
               </div>
             </div>
@@ -669,23 +758,39 @@ export default function StudentRegistrationForm() {
         );
       case 3:
         return (
-          <div className={`transition-all duration-300 ${isAnimating ? 'opacity-0 transform translate-x-10' : 'opacity-100'}`}>
-            <h2 className="text-xl font-bold text-gray-800 mb-6">Verification</h2>
-            
+          <div
+            className={`transition-all duration-300 ${
+              isAnimating ? "opacity-0 transform translate-x-10" : "opacity-100"
+            }`}
+          >
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
+              Verification
+            </h2>
+
             <div className="p-4 bg-[#fff9eb] rounded-lg border border-yellow-200 mb-4">
               <h3 className="font-bold text-gray-800 mb-2 flex items-center">
                 <Brain className="h-5 w-5 mr-2 text-[#e05527]" />
                 Quick Math Challenge
               </h3>
-              <p className="text-gray-600 text-sm mb-2">Please solve this simple math problem to complete your registration:</p>
-              
+              <p className="text-gray-600 text-sm mb-2">
+                Please solve this simple math problem to complete your
+                registration:
+              </p>
+
               <div className="flex items-center justify-center p-3 bg-white rounded-lg shadow-sm">
-                <span className="text-xl font-bold text-gray-800">{mathProblem.num1} × {mathProblem.num2} = ?</span>
+                <span className="text-xl font-bold text-gray-800">
+                  {mathProblem.num1} × {mathProblem.num2} = ?
+                </span>
               </div>
             </div>
-            
+
             <div className="relative">
-              <label className="block text-gray-700 text-sm font-medium mb-1" htmlFor="mathAnswer">Your Answer <span className="text-red-500">*</span></label>
+              <label
+                className="block text-gray-700 text-sm font-medium mb-1"
+                htmlFor="mathAnswer"
+              >
+                Your Answer <span className="text-red-500">*</span>
+              </label>
               <input
                 type="number"
                 id="mathAnswer"
@@ -697,19 +802,29 @@ export default function StudentRegistrationForm() {
                 required
               />
             </div>
-            
+
             {formState.error && (
               <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded-md">
                 <p className="text-sm text-red-600">{formState.error}</p>
               </div>
             )}
-            
+
             <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-              <h3 className="font-medium text-gray-800 mb-2">Registration Summary:</h3>
-              <p className="text-gray-600 text-sm"><span className="font-medium">Name:</span> {formState.name}</p>
-              <p className="text-gray-600 text-sm"><span className="font-medium">Email:</span> {formState.email}</p>
-              <p className="text-gray-600 text-sm"><span className="font-medium">Phone:</span> {formState.phone}</p>
-              <p className="text-gray-600 text-sm"><span className="font-medium">Course:</span> {formState.course}</p>
+              <h3 className="font-medium text-gray-800 mb-2">
+                Registration Summary:
+              </h3>
+              <p className="text-gray-600 text-sm">
+                <span className="font-medium">Name:</span> {formState.name}
+              </p>
+              <p className="text-gray-600 text-sm">
+                <span className="font-medium">Email:</span> {formState.email}
+              </p>
+              <p className="text-gray-600 text-sm">
+                <span className="font-medium">Phone:</span> {formState.phone}
+              </p>
+              <p className="text-gray-600 text-sm">
+                <span className="font-medium">Course:</span> {formState.course}
+              </p>
             </div>
           </div>
         );
@@ -717,7 +832,7 @@ export default function StudentRegistrationForm() {
         return null;
     }
   };
-  
+
   return (
     <div className="h-auto flex items-center justify-center bg-gradient-to-br from-[#fff9eb] to-white py-18 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-7xl">
@@ -728,44 +843,70 @@ export default function StudentRegistrationForm() {
               {/* Form Header */}
               <div className="bg-[#e05527] px-6 py-4">
                 <div className="flex justify-between items-center">
-                  <h1 className="text-2xl font-bold text-white">Registration Form</h1>
+                  <h1 className="text-2xl font-bold text-white">
+                    Registration Form
+                  </h1>
                   <div className="bg-white/30 px-2 py-1 rounded-md">
-                    <span className="text-white text-sm font-bold">15% OFF</span>
+                    <span className="text-white text-sm font-bold">
+                      15% OFF
+                    </span>
                   </div>
                 </div>
-                <p className="text-white/80 text-sm">Join our courses and start your learning journey today!</p>
+                <p className="text-white/80 text-sm">
+                  Join our courses and start your learning journey today!
+                </p>
               </div>
-              
+
               {/* Progress Bar */}
               <div className="px-6 pt-4">
                 <div className="flex justify-between mb-2">
-                  {['Personal', 'Contact', 'Course', 'Verify'].map((step, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                      <div className={`w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all duration-500 ${
-                        index < formStep ? 'bg-[#e05527] border-[#e05527] text-white' :
-                        index === formStep ? 'border-[#e05527] text-[#e05527]' :
-                        'border-gray-300 text-gray-300'
-                      }`}>
-                        {index < formStep ? <CheckCircle className="h-5 w-5" /> : index + 1}
+                  {["Personal", "Contact", "Course", "Verify"].map(
+                    (step, index) => (
+                      <div key={index} className="flex flex-col items-center">
+                        <div
+                          className={`w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all duration-500 ${
+                            index < formStep
+                              ? "bg-[#e05527] border-[#e05527] text-white"
+                              : index === formStep
+                              ? "border-[#e05527] text-[#e05527]"
+                              : "border-gray-300 text-gray-300"
+                          }`}
+                        >
+                          {index < formStep ? (
+                            <CheckCircle className="h-5 w-5" />
+                          ) : (
+                            index + 1
+                          )}
+                        </div>
+                        <span
+                          className={`text-xs mt-1 ${
+                            index <= formStep
+                              ? "text-[#e05527]"
+                              : "text-gray-400"
+                          }`}
+                        >
+                          {step}
+                        </span>
                       </div>
-                      <span className={`text-xs mt-1 ${
-                        index <= formStep ? 'text-[#e05527]' : 'text-gray-400'
-                      }`}>{step}</span>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-1.5 mb-6">
-                  <div 
+                  <div
                     className="bg-[#e05527] h-1.5 rounded-full transition-all duration-500"
                     style={{ width: `${(formStep / 3) * 100}%` }}
                   ></div>
                 </div>
               </div>
-              
+
               {/* Form Content */}
-              <form  id="RegisterForm" onSubmit={handleSubmit} className="px-6 py-4">
+              <form
+                id="RegisterForm"
+                onSubmit={handleSubmit}
+                className="px-6 py-4"
+              >
                 {getStepContent()}
-                
+
                 {/* Form Navigation */}
                 <div className="mt-8 flex justify-between">
                   {formStep > 0 && (
@@ -777,16 +918,16 @@ export default function StudentRegistrationForm() {
                       Back
                     </button>
                   )}
-                  
+
                   {formStep < 3 ? (
                     <button
                       type="button"
                       onClick={nextStep}
                       disabled={!validateStep()}
                       className={`ml-auto px-4 py-2 rounded-md flex items-center ${
-                        validateStep() 
-                          ? 'bg-[#e05527] text-white hover:bg-[#d04517]' 
-                          : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                        validateStep()
+                          ? "bg-[#e05527] text-white hover:bg-[#d04517]"
+                          : "bg-gray-300 text-gray-500 cursor-not-allowed"
                       } transition-colors duration-300`}
                     >
                       Continue <ChevronRight className="h-4 w-4 ml-1" />
@@ -801,7 +942,7 @@ export default function StudentRegistrationForm() {
                   )}
                 </div>
               </form>
-              
+
               {/* Form Footer */}
               <div className="px-6 py-4 bg-gray-50">
                 <div className="flex items-center justify-center text-sm text-gray-500">
@@ -811,15 +952,14 @@ export default function StudentRegistrationForm() {
               </div>
             </div>
           </div>
-          
+
           {/* Image Section - Right side (hidden on mobile) */}
           <div className="hidden lg:flex lg:w-1/2 bg-blue-50 relative overflow-hidden">
-          <img className='object-cover' src={boy} alt="" />
+            <img className="object-cover" src={boy} alt="" />
           </div>
         </div>
-        
+
         {/* Limited Time Offer Badge */}
-       
       </div>
     </div>
   );
