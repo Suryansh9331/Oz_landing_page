@@ -28,11 +28,11 @@
 
 //         {/* Call Button */}
 //         <a
-//           href="tel:+918777517741"
+//           href="tel:+919171453224"
 //           className="bg-[#e05527] text-white px-4 py-2 rounded hover:opacity-90 flex items-center gap-2 font-semibold text-sm animate-pulse"
 //         >
 //           <FaPhoneAlt className="animate-vibrate" />
-//           +91 8777517741
+//           +91 9171453224
 //         </a>
 
 //         {/* Mobile Menu Toggle */}
@@ -102,11 +102,11 @@
 
 //         {/* Call Button - Larger Size */}
 //         <a
-//           href="tel:+918777517741"
+//           href="tel:+919171453224"
 //           className="hidden sm:flex bg-[#e05527] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-lg hover:bg-[#c74420] transition-all duration-200 items-center gap-3 font-semibold text-sm lg:text-base shadow-lg hover:shadow-xl"
 //         >
 //           <FaPhoneAlt className="animate-vibrate text-lg lg:text-xl" />
-//           <span className="whitespace-nowrap">+91 8777517741</span>
+//           <span className="whitespace-nowrap">+91 9171453224</span>
 //         </a>
 
 //         {/* Mobile Menu Toggle */}
@@ -156,11 +156,11 @@
 //           {/* Mobile Call Button */}
 //           <div className="pt-3 border-t border-gray-200">
 //             <a
-//               href="tel:+918777517741"
+//               href="tel:+919171453224"
 //               className="flex bg-[#e05527] text-white px-6 py-3 rounded-lg hover:bg-[#c74420] transition-all duration-200 items-center justify-center gap-3 font-semibold text-base shadow-lg w-full"
 //             >
 //               <FaPhoneAlt className="animate-vibrate text-lg" />
-//               <span>+91 8777517741</span>
+//               <span>+91 9171453224</span>
 //             </a>
 //           </div>
 //         </div>
@@ -280,11 +280,11 @@ const Navbar = () => {
 
         {/* Call Button - Larger Size */}
         <a
-          href="tel:+918777517741"
+          href="tel:+919171453224"
           className="hidden sm:flex bg-[#e05527] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-lg hover:bg-[#c74420] transition-all duration-200 items-center gap-3 font-semibold text-sm lg:text-base shadow-lg hover:shadow-xl animate-bounce"
         >
           <FaPhoneAlt className="animate-vibrate text-lg lg:text-xl" />
-          <span className="whitespace-nowrap">+91 8777517741</span>
+          <span className="whitespace-nowrap">+91 9171453224</span>
         </a>
 
         {/* Mobile Menu Toggle */}
@@ -364,11 +364,11 @@ const Navbar = () => {
           {/* Mobile Call Button */}
           <div className="pt-3 border-t border-gray-200">
             <a
-              href="tel:+918777517741"
+              href="tel:+919171453224"
               className="flex bg-[#e05527] text-white px-6 py-3 rounded-lg hover:bg-[#c74420] transition-all duration-200 items-center justify-center gap-3 font-semibold text-base shadow-lg w-full"
             >
               <FaPhoneAlt className="animate-vibrate text-lg" />
-              <span>+91 8777517741</span>
+              <span>+91 9171453224</span>
             </a>
           </div>
         </div>
